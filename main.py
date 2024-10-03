@@ -6,13 +6,13 @@ import export_data
 
 def main():
     # Load and preprocess data
-    df = data_processing.load_data('transaction.csv')
+    df = data_processing.load_csv('transaction.csv')
     
     # Extract transaction details using regex
     df = data_processing.extract_transaction_details(df)
     
     # Categorize transactions
-    df = data_processing.categorize_transactions(df)
+    df = data_processing.categorize_transaction(df)
     
     # Analyze transactions (total transactions per bank, etc.)
     transaction_analysis.analyze_transactions(df)
